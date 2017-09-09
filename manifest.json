@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "IPL Fantasy Live Updater",
+  "version": "1.1.1",
+  "version_name": "1.1.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "button_score.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://fantasy.iplt20.com/*"
+      ],
+      "js": ["jquery-3.2.0.min.js", "firebase.js", "firebase_action.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
